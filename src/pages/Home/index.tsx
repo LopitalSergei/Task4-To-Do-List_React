@@ -1,3 +1,9 @@
+import { FormToDo } from "../../components/FormToDo";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <main>
+      <FormToDo />
+    </main>
+  );
 }
