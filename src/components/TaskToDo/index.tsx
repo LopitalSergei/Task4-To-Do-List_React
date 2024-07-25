@@ -1,3 +1,6 @@
+import { CheckBox, CheckBoxLabel, Task, TrashCan } from "./styled";
+import { FaRegTrashCan } from "react-icons/fa6";
+
 interface TaskToDoProps {
   id: number;
   value: string;
@@ -14,30 +17,26 @@ export function TaskToDo({
   toggleTaskStatus,
 }: TaskToDoProps) {
   return (
-    <div key={id.toString()}>
-      <input
+    <Task key={id.toString()}>
+      <CheckBox
         type={"checkbox"}
+        id={id.toString()}
         defaultChecked={status}
         onClick={() => {
           toggleTaskStatus(id);
         }}
-      ></input>
-      <p
-        style={
-          status
-            ? { textDecoration: "line-through" }
-            : { textDecoration: "none" }
-        }
-      >
+      ></CheckBox>
+      <CheckBoxLabel htmlFor={id.toString()} status={status}>
         {value}
-      </p>
-      <button
-        onClick={() => {
-          deleteTask(id);
-        }}
-      >
-        Del
-      </button>
-    </div>
+      </CheckBoxLabel>
+      <TrashCan>
+        <FaRegTrashCan
+          size={25}
+          onClick={() => {
+            deleteTask(id);
+          }}
+        />
+      </TrashCan>
+    </Task>
   );
 }

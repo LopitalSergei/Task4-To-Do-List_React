@@ -2,6 +2,14 @@ import { useState } from "react";
 import { InputToDo } from "../InputToDo";
 import { ITask } from "../../types/types";
 import { TaskToDo } from "../TaskToDo";
+import {
+  ButtonsRow,
+  SelectButton,
+  TasksContainer,
+  Title,
+  ToDoSection,
+  DeleteButton,
+} from "./styled";
 
 export function FormToDo() {
   const arrTasks: ITask[] = [];
@@ -65,12 +73,20 @@ export function FormToDo() {
   ));
 
   return (
-    <section>
+    <ToDoSection>
       <InputToDo addTask={addTask} toDo={toDo} setToDo={setToDo} />
-      <div style={{ padding: "5px 10px" }}>{tasksList}</div>
-      <button onClick={() => setSelectedTasks("all")}>All</button>
-      <button onClick={() => setSelectedTasks("active")}>Active</button>
-      <button onClick={() => setSelectedTasks("completed")}>Completed</button>
-    </section>
+      <Title>Task list</Title>
+      <TasksContainer>{tasksList}</TasksContainer>
+      <ButtonsRow>
+        <SelectButton onClick={() => setSelectedTasks("all")}>All</SelectButton>
+        <SelectButton onClick={() => setSelectedTasks("active")}>
+          Active
+        </SelectButton>
+        <SelectButton onClick={() => setSelectedTasks("completed")}>
+          Completed
+        </SelectButton>
+        <DeleteButton>Delete Completed</DeleteButton>
+      </ButtonsRow>
+    </ToDoSection>
   );
 }

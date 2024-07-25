@@ -1,9 +1,10 @@
 import { FormToDo } from "../../components/FormToDo";
+import { MainContainer } from "./styled";
 
 export default function Home() {
   return (
-    <main>
+    <MainContainer>
       <FormToDo />
-    </main>
+    </MainContainer>
   );
 }
