@@ -47,6 +47,11 @@ export function FormToDo() {
     setTasks(afterToggleTasks);
   }
 
+  function deleteCompletedTasks() {
+    const afterDeleteTasks = tasks.filter((task) => task.status === false);
+    setTasks(afterDeleteTasks);
+  }
+
   switch (selectedTasks) {
     case "all":
       copyTasks = tasks;
@@ -85,7 +90,9 @@ export function FormToDo() {
         <SelectButton onClick={() => setSelectedTasks("completed")}>
           Completed
         </SelectButton>
-        <DeleteButton>Delete Completed</DeleteButton>
+        <DeleteButton onClick={() => deleteCompletedTasks()}>
+          Delete Completed
+        </DeleteButton>
       </ButtonsRow>
     </ToDoSection>
   );
