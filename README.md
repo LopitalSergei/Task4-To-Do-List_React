@@ -28,4 +28,5 @@ You can view the project [here](https://task4-to-do-list-react.vercel.app/).
     - Editing a task;
     - Search for a user on Github;
     - Splitting components into smaller components;
-    - Setting up the environment.
+    - Setting up the environment;
+    - Saving tasks to local storage.
