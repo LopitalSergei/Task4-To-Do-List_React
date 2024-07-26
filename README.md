@@ -14,7 +14,14 @@ The project was deployed on the platform Vercel.com.
 
 You can view the project [here](https://task4-to-do-list-react.vercel.app/).
 
-What is implemented: - Header with adaptive design; - Home page with To Do List with adaptive design; - Settings page with switch theme selector with adaptive design; - Adding a new task; - Deleting a task; - Sorting tasks by status; - Deleting completed tasks; - Animations.
+    What is implemented:
+     - Header with adaptive design;
+     - Home page with To Do List with adaptive design;
+     - Settings page with switch theme selector with adaptive design;
+     - Adding a new task; - Deleting a task;
+     - Sorting tasks by status;
+     - Deleting completed tasks;
+     - Animations.
 
     What is not implemented:
     - Switching theme;
