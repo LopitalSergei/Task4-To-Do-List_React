@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Task = styled.div`
   display: flex;
   gap: 10px;
-  border-bottom: 1px solid #979797;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
   padding: 20px 0;
 
   &:first-child {
-    border-top: 1px solid #979797;
+    border-top: 1px solid ${({ theme }) => theme.colors.gray};
   }
 `;
 
@@ -52,7 +52,7 @@ export const CheckBoxLabel = styled.label<{
 `;
 
 export const TrashCan = styled.div`
-  color: #ff4081;
+  color: ${({ theme }) => theme.colors.red};
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -61,10 +61,10 @@ export const TrashCan = styled.div`
   height: 30px;
 
   &:hover {
-    color: #ff2081;
+    color: ${({ theme }) => theme.colors.redHover};
   }
 
   &:active {
-    color: #ff1081;
+    color: ${({ theme }) => theme.colors.redActive};
   }
 `;

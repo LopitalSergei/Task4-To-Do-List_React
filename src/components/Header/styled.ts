@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
 export const Container = styled.header`
-  background-color: #3e50b5;
+  background-color: ${({ theme }) => theme.colors.main};
   color: #ffffff;
   padding: 30px 45px;
   position: relative;
@@ -35,7 +35,7 @@ export const Navbar = styled.nav<{ isOpen: boolean }>`
     z-index: 0;
     top: ${(props) => (props.isOpen ? "0" : "-100vh")};
     left: 0;
-    background-color: #3e50b5;
+    background-color: ${({ theme }) => theme.colors.main};
     height: 100vh;
     width: 100%;
     flex-direction: column;

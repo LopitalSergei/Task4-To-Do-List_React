@@ -26,7 +26,7 @@ export const ButtonsRow = styled.div`
 `;
 
 export const SelectButton = styled.button`
-  background-color: #3e50b5;
+  background-color: ${({ theme }) => theme.colors.main};
   color: #ffffff;
   width: 130px;
   padding: 10px 0;
@@ -35,11 +35,11 @@ export const SelectButton = styled.button`
   border-radius: 10px;
 
   &:hover {
-    background-color: #3e30b5;
+    background-color: ${({ theme }) => theme.colors.mainHover};
   }
 
   &:active {
-    background-color: #3e10b5;
+    background-color: ${({ theme }) => theme.colors.mainActive};
   }
 
   @media (max-width: 555px) {
@@ -48,7 +48,7 @@ export const SelectButton = styled.button`
 `;
 
 export const DeleteButton = styled.button`
-  background-color: #ff4081;
+  background-color: ${({ theme }) => theme.colors.red};
   color: #ffffff;
   width: 160px;
   padding: 10px 0;
@@ -58,11 +58,11 @@ export const DeleteButton = styled.button`
   margin-left: auto;
 
   &:hover {
-    background-color: #ff2081;
+    background-color: ${({ theme }) => theme.colors.redHover};
   }
 
   &:active {
-    background-color: #ff1081;
+    background-color: ${({ theme }) => theme.colors.redActive};
   }
 
   @media (max-width: 555px) {
