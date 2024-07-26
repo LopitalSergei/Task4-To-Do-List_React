@@ -27,6 +27,11 @@ declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
       main: string;
+      mainHover: string;
+      mainActive: string;
+      red: string;
+      redHover: string;
+      redActive: string;
       gray: string;
     };
   }
@@ -35,13 +40,23 @@ declare module "styled-components" {
 export const lightTheme = {
   colors: {
     main: "#3e50b5;",
+    mainHover: "#3e30b5",
+    mainActive: "#3e10b5",
+    red: "#ff4081",
+    redHover: "#ff2081",
+    redActive: "#ff1081",
     gray: "#979797;",
   },
 };
 
 export const darkTheme = {
   colors: {
-    main: "#979797;",
-    gray: "#3e50b5;",
+    main: "#3e50b5;",
+    mainHover: "#3e30b5",
+    mainActive: "#3e10b5",
+    red: "#ff4081",
+    redHover: "#ff2081",
+    redActive: "#ff1081",
+    gray: "#979797;",
   },
 };

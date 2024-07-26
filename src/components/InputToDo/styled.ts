@@ -15,22 +15,22 @@ export const Input = styled.input`
   font-size: larger;
   padding: 0 10px;
   border: none;
-  border-bottom: 2px solid #979797;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.gray};
 
   &:focus {
     outline: none;
-    border-bottom: 2px solid #3e50b5;
+    border-bottom: 2px solid ${({ theme }) => theme.colors.main};
   }
 
   &:not(:placeholder-shown) + label,
   &:focus + label {
-    color: #3e50b5;
+    color: ${({ theme }) => theme.colors.main};
     opacity: 1;
     transform: translateX(-5px) translateY(-30px);
   }
 
   &:not(:focus) + label {
-    color: #979797;
+    color: ${({ theme }) => theme.colors.gray};
   }
 `;
 
@@ -54,10 +54,10 @@ export const AddButton = styled.button`
   border-radius: 10px;
 
   &:hover {
-    background-color: #3e30b5;
+    background-color: ${({ theme }) => theme.colors.mainHover};
   }
 
   &:active {
-    background-color: #3e10b5;
+    background-color: ${({ theme }) => theme.colors.mainActive};
   }
 `;
