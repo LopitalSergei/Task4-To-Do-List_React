@@ -1,5 +1,5 @@
 import { FormToDo } from "../../components/FormToDo";
-import { MainContainer } from "./styled";
+import { MainContainer } from "../../global.styled";
 
 export default function Home() {
   return (

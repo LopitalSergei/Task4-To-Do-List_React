@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -15,4 +15,10 @@ export const GlobalStyles = createGlobalStyle`
   button{
 	cursor: pointer;
   }
+`;
+
+export const MainContainer = styled.main`
+  max-width: 807px;
+  margin: 0 auto;
+  padding: 0 20px;
 `;

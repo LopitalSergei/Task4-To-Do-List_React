@@ -1,3 +1,10 @@
+import { SwitchTheme } from "../../components/SwitchTheme";
+import { MainContainer } from "../../global.styled";
+
 export default function Settings() {
-  return <div>Settings</div>;
+  return (
+    <MainContainer>
+      <SwitchTheme />
+    </MainContainer>
+  );
 }
