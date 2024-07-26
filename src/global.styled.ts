@@ -6,5 +6,13 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 	 font-family: "Jost", sans-serif;
+  };
+
+  *::after, *::before {
+    box-sizing: border-box;
+  };
+
+  button{
+	cursor: pointer;
   }
 `;
