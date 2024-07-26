@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
 export const Container = styled.header`
-  background-color: #3e50b5;
+  background-color: ${({ theme }) => theme.colors.main};
   color: #ffffff;
   padding: 30px 45px;
   position: relative;

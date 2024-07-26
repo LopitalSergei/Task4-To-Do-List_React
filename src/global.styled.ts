@@ -22,3 +22,26 @@ export const MainContainer = styled.main`
   margin: 0 auto;
   padding: 0 20px;
 `;
+
+declare module "styled-components" {
+  export interface DefaultTheme {
+    colors: {
+      main: string;
+      gray: string;
+    };
+  }
+}
+
+export const lightTheme = {
+  colors: {
+    main: "#3e50b5;",
+    gray: "#979797;",
+  },
+};
+
+export const darkTheme = {
+  colors: {
+    main: "#979797;",
+    gray: "#3e50b5;",
+  },
+};

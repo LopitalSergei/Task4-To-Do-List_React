@@ -45,7 +45,7 @@ export const FloatingLabel = styled.label`
 `;
 
 export const AddButton = styled.button`
-  background-color: #3e50b5;
+  background-color: ${({ theme }) => theme.colors.main};
   color: #ffffff;
   width: 170px;
   padding: 15px 0;
