@@ -1,12 +1,24 @@
 import { IUser } from "../../types/types";
-import { UserInfo } from "./styled";
+import { ImageWrapper, Login, UserImage, UserInfo } from "./styled";
 
-export function GHUserInfo({ login, avatar_url, url }: IUser) {
-  return (
-    <UserInfo>
-      <div>{login}</div>
-      <div>{avatar_url}</div>
-      <div>{url}</div>
-    </UserInfo>
-  );
+interface GHUserInfoProps extends IUser {
+  info: boolean;
+}
+
+export function GHUserInfo({
+  info,
+  login,
+  avatar_url,
+  html_url,
+}: GHUserInfoProps) {
+  if (info) {
+    return (
+      <UserInfo href={html_url}>
+        <Login>Login: {login}</Login>
+        <ImageWrapper>
+          <UserImage src={avatar_url} alt={login} />
+        </ImageWrapper>
+      </UserInfo>
+    );
+  } else return null;
 }

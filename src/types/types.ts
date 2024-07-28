@@ -7,5 +7,5 @@ export interface ITask {
 export interface IUser {
   readonly login: string;
   readonly avatar_url: string;
-  readonly url: string;
+  readonly html_url: string;
 }

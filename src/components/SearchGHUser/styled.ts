@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const SearchUserBlock = styled.div``;
+export const SearchUserBlock = styled.div`
+  margin-top: 30px;
+  width: 250px;
+`;
 
 export const SearchUserTitle = styled.h2`
   font-size: 18px;
@@ -11,7 +14,13 @@ export const SearchUserInputRow = styled.div`
   display: flex;
   align-items: center;
 `;
-export const SearchUserInput = styled.input``;
+export const SearchUserInput = styled.input`
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
+`;
 export const SearchUserIcon = styled.div`
   display: flex;
   justify-content: center;

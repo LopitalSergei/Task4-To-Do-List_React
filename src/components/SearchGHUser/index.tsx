@@ -16,9 +16,11 @@ export function SearchGHUser() {
   const [url, setUrl] = useState("");
   const [avatarUrl, setAvatarUrl] = useState("");
 
+  const [info, setInfo] = useState(false);
+
   async function searchUser(login: string) {
     const response = await axios.get(`https://api.github.com/users/${login}`);
-    setUrl(response.data.url);
+    setUrl(response.data.html_url);
     setUserLogin(response.data.login);
     setAvatarUrl(response.data.avatar_url);
     setSearchUserLogin("");
@@ -33,10 +35,21 @@ export function SearchGHUser() {
           onChange={(e) => setSearchUserLogin(e.target.value)}
         />
         <SearchUserIcon>
-          <IoIosSearch size={25} onClick={() => searchUser(searchUserLogin)} />
+          <IoIosSearch
+            size={25}
+            onClick={() => {
+              searchUser(searchUserLogin);
+              setInfo(true);
+            }}
+          />
         </SearchUserIcon>
       </SearchUserInputRow>
-      <GHUserInfo login={userLogin} avatar_url={avatarUrl} url={url} />
+      <GHUserInfo
+        info={info}
+        login={userLogin}
+        avatar_url={avatarUrl}
+        html_url={url}
+      />
     </SearchUserBlock>
   );
 }
