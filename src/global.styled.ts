@@ -51,9 +51,9 @@ export const lightTheme = {
 
 export const darkTheme = {
   colors: {
-    main: "#3e50b5;",
-    mainHover: "#3e30b5",
-    mainActive: "#3e10b5",
+    main: "#060A30",
+    mainHover: "#060A40",
+    mainActive: "#060A50",
     red: "#ff4081",
     redHover: "#ff2081",
     redActive: "#ff1081",
