@@ -2,6 +2,7 @@ export interface ITask {
   id: number;
   value: string;
   status: boolean;
+  isEditing: boolean;
 }
 
 export interface IUser {

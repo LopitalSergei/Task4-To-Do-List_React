@@ -10,6 +10,7 @@ import {
   ToDoSection,
   DeleteButton,
 } from "./styled";
+import { EditToDo } from "../EditToDo";
 
 export function FormToDo() {
   const arrTasks: ITask[] = JSON.parse(localStorage.getItem("tasks") || "[]");
@@ -27,6 +28,7 @@ export function FormToDo() {
       id: Math.random(),
       value: toDo,
       status: false,
+      isEditing: false,
     };
 
     const newTasks: ITask[] = [taskTodo, ...tasks];
@@ -40,6 +42,23 @@ export function FormToDo() {
     const afterDeleteTasks = tasks.filter((task) => task.id !== id);
     setTasks(afterDeleteTasks);
     localStorage.setItem("tasks", JSON.stringify(afterDeleteTasks));
+  }
+
+  function editTask(id: number) {
+    const afterEditTasks = tasks.map((task) =>
+      task.id === id ? { ...task, isEditing: !task.isEditing } : task,
+    );
+    setTasks(afterEditTasks);
+  }
+
+  function editToDo(value: string, todo: ITask) {
+    const afterEditTasks = tasks.map((task) =>
+      task.id === todo.id
+        ? { ...task, value, isEditing: !task.isEditing }
+        : task,
+    );
+    setTasks(afterEditTasks);
+    localStorage.setItem("tasks", JSON.stringify(afterEditTasks));
   }
 
   function toggleTaskStatus(id: number) {
@@ -70,16 +89,21 @@ export function FormToDo() {
       break;
   }
 
-  const tasksList = copyTasks.map((task) => (
-    <TaskToDo
-      key={task.id}
-      id={task.id}
-      value={task.value}
-      status={task.status}
-      deleteTask={deleteTask}
-      toggleTaskStatus={toggleTaskStatus}
-    />
-  ));
+  const tasksList = copyTasks.map((task) =>
+    task.isEditing ? (
+      <EditToDo key={task.id} task={task} editTask={editToDo} />
+    ) : (
+      <TaskToDo
+        key={task.id}
+        id={task.id}
+        value={task.value}
+        status={task.status}
+        deleteTask={deleteTask}
+        editTask={editTask}
+        toggleTaskStatus={toggleTaskStatus}
+      />
+    ),
+  );
 
   return (
     <ToDoSection>

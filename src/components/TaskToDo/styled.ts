@@ -51,6 +51,24 @@ export const CheckBoxLabel = styled.label<{
   }
 `;
 
+export const EditBtn = styled.div`
+  color: ${({ theme }) => theme.colors.main};
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.mainHover};
+  }
+
+  &:active {
+    color: ${({ theme }) => theme.colors.mainActive};
+  }
+`;
+
 export const TrashCan = styled.div`
   color: ${({ theme }) => theme.colors.red};
   cursor: pointer;
