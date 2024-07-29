@@ -18,15 +18,17 @@ You can view the project [here](https://task4-to-do-list-react.vercel.app/).
     - Header with adaptive design;
     - Home page with To Do List with adaptive design;
     - Settings page with switch theme selector with adaptive design;
-    - Adding a new task; - Deleting a task;
+    - Adding a new task;
+    - Editing a task;
+    - Deleting a task;
+    - Saving tasks to local storage;
     - Sorting tasks by status;
     - Deleting completed tasks;
     - Animations;
-    - Search for a user on Github.
+    - Search for a user on Github;
+    - Switching theme.
 
     What is not implemented:
-    - Switching theme;
-    - Editing a task;
     - Splitting components into smaller components;
     - Setting up the environment;
-    - Saving tasks to local storage.
+    - Error handling using "Error Boundaries"
