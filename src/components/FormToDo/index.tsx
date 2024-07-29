@@ -12,7 +12,7 @@ import {
 } from "./styled";
 
 export function FormToDo() {
-  const arrTasks: ITask[] = [];
+  const arrTasks: ITask[] = JSON.parse(localStorage.getItem("tasks") || "[]");
   const [toDo, setToDo] = useState("");
   const [tasks, setTasks] = useState(arrTasks);
   const [selectedTasks, setSelectedTasks] = useState("");
@@ -29,15 +29,17 @@ export function FormToDo() {
       status: false,
     };
 
-    const newTask: ITask[] = [taskTodo, ...tasks];
+    const newTasks: ITask[] = [taskTodo, ...tasks];
 
-    setTasks(newTask);
+    setTasks(newTasks);
     setToDo("");
+    localStorage.setItem("tasks", JSON.stringify(newTasks));
   }
 
   function deleteTask(id: number) {
     const afterDeleteTasks = tasks.filter((task) => task.id !== id);
     setTasks(afterDeleteTasks);
+    localStorage.setItem("tasks", JSON.stringify(afterDeleteTasks));
   }
 
   function toggleTaskStatus(id: number) {
@@ -45,11 +47,13 @@ export function FormToDo() {
       task.id === id ? { ...task, status: !task.status } : { ...task },
     );
     setTasks(afterToggleTasks);
+    localStorage.setItem("tasks", JSON.stringify(afterToggleTasks));
   }
 
   function deleteCompletedTasks() {
     const afterDeleteTasks = tasks.filter((task) => task.status === false);
     setTasks(afterDeleteTasks);
+    localStorage.setItem("tasks", JSON.stringify(afterDeleteTasks));
   }
 
   switch (selectedTasks) {
