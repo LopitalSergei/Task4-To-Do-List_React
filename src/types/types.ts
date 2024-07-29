@@ -15,4 +15,7 @@ export enum Themes {
   dark = "Dark theme",
 }
 
-export type ThemeType = { theme: string; setTheme: (theme: string) => void };
+export type ThemeType = {
+  theme: string | null;
+  setTheme: (theme: string) => void;
+};

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ThemeType } from "./types/types";
 
 export default function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme-style"));
   let currentTheme = lightTheme;
 
   switch (theme) {

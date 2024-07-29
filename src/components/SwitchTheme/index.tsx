@@ -12,6 +12,10 @@ const themes = Object.entries(Themes).map((theme) => (
   </SwitchThemeOption>
 ));
 
+function handleSwitchTheme(theme: string) {
+  localStorage.setItem("theme-style", theme);
+}
+
 export function SwitchTheme({ theme, setTheme }: ThemeType) {
   return (
     <SwitchThemeRow>
@@ -19,8 +23,9 @@ export function SwitchTheme({ theme, setTheme }: ThemeType) {
       <SwitchThemeSelect
         onChange={(e) => {
           setTheme(e.target.value);
+          handleSwitchTheme(e.target.value);
         }}
-        value={theme}
+        value={theme || ""}
         name="theme"
         id="theme-select"
       >
