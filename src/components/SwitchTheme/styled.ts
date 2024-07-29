@@ -7,7 +7,7 @@ export const SwitchThemeRow = styled.div`
 export const SwitchThemeLabel = styled.label`
   display: block;
   font-size: 18px;
-  color: #646464;
+  color: ${({ theme }) => theme.colors.grayText2};
   margin-bottom: 10px;
 `;
 
@@ -16,7 +16,7 @@ export const SwitchThemeSelect = styled.select`
   padding: 10px;
   outline: none;
   border: none;
-  border: 1px solid #a1a1a1;
+  border: 1px solid ${({ theme }) => theme.colors.grayText3};
   border-radius: 10px;
   font-size: 18px;
   appearance: none;
@@ -25,4 +25,6 @@ export const SwitchThemeSelect = styled.select`
     no-repeat 95% 50%;
 `;
 
-export const SwitchThemeOption = styled.option``;
+export const SwitchThemeOption = styled.option`
+  background-color: ${({ theme }) => theme.colors.body};
+`;

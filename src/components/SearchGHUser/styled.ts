@@ -17,9 +17,15 @@ export const SearchUserInputRow = styled.div`
 export const SearchUserInput = styled.input`
   padding: 10px;
   width: 100%;
+  font-size: 18px;
+  color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.colors.body};
   outline: none;
   border: none;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.grayText2};
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.grayText};
+  }
 `;
 export const SearchUserIcon = styled.div`
   display: flex;

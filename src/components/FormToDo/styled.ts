@@ -27,7 +27,7 @@ export const ButtonsRow = styled.div`
 
 export const SelectButton = styled.button`
   background-color: ${({ theme }) => theme.colors.main};
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   width: 130px;
   padding: 10px 0;
   font-size: larger;
@@ -49,7 +49,7 @@ export const SelectButton = styled.button`
 
 export const DeleteButton = styled.button`
   background-color: ${({ theme }) => theme.colors.red};
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   width: 160px;
   padding: 10px 0;
   font-size: larger;

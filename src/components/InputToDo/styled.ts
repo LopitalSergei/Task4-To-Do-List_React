@@ -15,7 +15,8 @@ export const Input = styled.input`
   font-size: larger;
   padding: 0 10px;
   border: none;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.gray};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.grayText};
+  background-color: ${({ theme }) => theme.colors.body};
 
   &:focus {
     outline: none;
@@ -30,7 +31,7 @@ export const Input = styled.input`
   }
 
   &:not(:focus) + label {
-    color: ${({ theme }) => theme.colors.gray};
+    color: ${({ theme }) => theme.colors.grayText};
   }
 `;
 
@@ -46,7 +47,7 @@ export const FloatingLabel = styled.label`
 
 export const AddButton = styled.button`
   background-color: ${({ theme }) => theme.colors.main};
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   width: 170px;
   padding: 15px 0;
   font-size: larger;

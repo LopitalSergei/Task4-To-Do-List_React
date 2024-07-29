@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Task = styled.div`
   display: flex;
   gap: 10px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.grayText};
   padding: 20px 0;
 
   &:first-child {
-    border-top: 1px solid ${({ theme }) => theme.colors.gray};
+    border-top: 1px solid ${({ theme }) => theme.colors.grayText};
   }
 `;
 
