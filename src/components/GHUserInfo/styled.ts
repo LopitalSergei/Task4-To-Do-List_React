@@ -10,7 +10,7 @@ export const UserInfo = styled.a`
   width: 500px;
   height: 500px;
   padding: 50px;
-  box-shadow: 0px 4px 5px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 4px 5px 2px ${({ theme }) => theme.colors.boxShadow};
   text-decoration: none;
   color: black;
 

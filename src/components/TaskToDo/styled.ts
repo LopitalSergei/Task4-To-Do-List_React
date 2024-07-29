@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Task = styled.div`
   display: flex;
   gap: 10px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.grayText};
   padding: 20px 0;
 
   &:first-child {
-    border-top: 1px solid ${({ theme }) => theme.colors.gray};
+    border-top: 1px solid ${({ theme }) => theme.colors.grayText};
   }
 `;
 
@@ -48,6 +48,24 @@ export const CheckBoxLabel = styled.label<{
     width: 22px;
     height: 22px;
     border-radius: 5px;
+  }
+`;
+
+export const EditBtn = styled.div`
+  color: ${({ theme }) => theme.colors.main};
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.mainHover};
+  }
+
+  &:active {
+    color: ${({ theme }) => theme.colors.mainActive};
   }
 `;
 

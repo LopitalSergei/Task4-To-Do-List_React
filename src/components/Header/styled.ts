@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Container = styled.header`
   background-color: ${({ theme }) => theme.colors.main};
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   padding: 30px 45px;
   position: relative;
   z-index: 10;
@@ -61,7 +61,7 @@ export const NavigationLink = styled(NavLink)`
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #ffffff;
+    background: ${({ theme }) => theme.colors.white};
   }
 
   &.active {

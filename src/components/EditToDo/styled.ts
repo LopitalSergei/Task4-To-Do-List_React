@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const InputRow = styled.div`
+  margin-top: 33px;
   display: flex;
   gap: 50px;
   position: relative;
@@ -35,21 +36,11 @@ export const Input = styled.input`
   }
 `;
 
-export const FloatingLabel = styled.label`
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  font-size: larger;
-  opacity: 0.7;
-  transition: 0.3s;
-  cursor: text;
-`;
-
-export const AddButton = styled.button`
+export const UpdateButton = styled.button`
   background-color: ${({ theme }) => theme.colors.main};
   color: ${({ theme }) => theme.colors.white};
   width: 170px;
-  padding: 15px 0;
+  padding: 5px 0;
   font-size: larger;
   border: none;
   border-radius: 10px;
